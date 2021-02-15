@@ -1,0 +1,15 @@
+<div *ngIf="book">
+  <form class="form full-width">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="book[name]">Name</label>
+        <input type="text" name="book_name" class="form-control" [(ngModel)]="book.name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="book[price]">Price</label>
+        <input type="text" name="book_price" class="form-control" [(ngModel)]="book.price">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="updateBook()">Save</button>
+  </form>
+</div>
